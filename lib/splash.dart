@@ -24,9 +24,9 @@ class Splash extends StatelessWidget {
      child: SafeArea(
        child: Padding(
          padding: const EdgeInsets.symmetric(horizontal:20.0,vertical: 20.0),
-         child: Column(
-           mainAxisAlignment: MainAxisAlignment.start,
-           crossAxisAlignment: CrossAxisAlignment.start,
+         child: Stack(
+           // mainAxisAlignment: MainAxisAlignment.start,
+           // crossAxisAlignment: CrossAxisAlignment.start,
            children: [
              Row(
                mainAxisAlignment: MainAxisAlignment.center,
@@ -52,19 +52,41 @@ class Splash extends StatelessWidget {
                  ),
                ],
              ),
-         Text(
-                   '"There are a lot of we\n  should take utmost\ncare of, the eye is one \nof such"',
-                   textAlign: TextAlign.left,
-                 style: TextStyle(
-                    fontSize: 18,
-                   color: Colors.black87,
-                    fontStyle: FontStyle.italic,
-               ),
+         Positioned(
+           top: 400, // Adjust this to move the text up or down
+           left: 20, // Adjust this to move the text left or right
+           right: 20,
+           child: Text(
+                     '"There are a lot of we\n  should take utmost\ncare of, the eye is one \nof such"',
+                     textAlign: TextAlign.left,
+                   style: TextStyle(
+                      fontSize: 18,
+                     color: Colors.black87,
+                      fontWeight: FontWeight.bold
                  ),
+                   ),
+         ),
+             Positioned(
+               top: 600,
+                 child:
+                 ElevatedButton(
+
+                   style: ButtonStyle(
+                     shape: WidgetStatePropertyAll(
+                       RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),),
+                     ),
+                       minimumSize: WidgetStatePropertyAll(
+                       Size(200, 40), // Width: 200, Height: 60
+                 ),
+                   ),
+                     onPressed: (){},
+                 child: Text("Get Started",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),),),
            ],
          ),
+         
 
        ),
+       
 
      ),
 
