@@ -11,7 +11,7 @@ class Splash extends StatelessWidget {
    body: Container(
      width: double.infinity,
      height: double.infinity,
-     decoration: BoxDecoration(
+     decoration: const BoxDecoration(
        gradient: LinearGradient(
            begin: Alignment.topLeft,
          end: Alignment.bottomRight,
@@ -28,7 +28,7 @@ class Splash extends StatelessWidget {
            // mainAxisAlignment: MainAxisAlignment.start,
            // crossAxisAlignment: CrossAxisAlignment.start,
            children: [
-             Row(
+             const Row(
                mainAxisAlignment: MainAxisAlignment.center,
                crossAxisAlignment: CrossAxisAlignment.start,
                children: [
@@ -52,7 +52,7 @@ class Splash extends StatelessWidget {
                  ),
                ],
              ),
-         Positioned(
+         const Positioned(
            top: 400, // Adjust this to move the text up or down
            left: 20, // Adjust this to move the text left or right
            right: 20,
@@ -75,7 +75,7 @@ class Splash extends StatelessWidget {
                      shape: WidgetStatePropertyAll(
                        RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),),
                      ),
-                       minimumSize: WidgetStatePropertyAll(
+                       minimumSize: const WidgetStatePropertyAll(
                        Size(200, 40), // Width: 200, Height: 60
                  ),
                    ),
